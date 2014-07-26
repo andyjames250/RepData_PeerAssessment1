@@ -95,6 +95,13 @@ data4[is.na(data4$steps),2] <- data4[is.na(data4$steps),4]
 
 ```r
 library(gridExtra)
+```
+
+```
+## Loading required package: grid
+```
+
+```r
 library(ggplot2)
 library(plyr)
 data5 <- ddply(data4, .(date), summarise, stepsTotal = sum(steps, na.rm = TRUE))
